@@ -70,7 +70,7 @@ window.SITE = {
       added: "2026-10-31",
       title: "On the privatization of infrastructure",
       text: [
-        "One thread I've been following for about 15 years now is the consequences of the privatization (and at times mystification) of infrastructure. <a href=\"https://docs.google.com/document/d/1hgLJojU9h8x-zuj4P_p_TcqxUq0zmcsLsufXwVq7lHo/edit?usp=sharing\">My dissertation treats this as a semiotic question by examining secret infrastructures of mutual aid in Dakar, Senegal.</a> <a href=\"https://docs.google.com/document/d/1csd2fSHomwdyd57dVpNNszFTx-uoWLIkcn3BvkQS-IA/edit\">Right now I'm thinking through the role of contemporary finance capital.</a>"
+        "One thread I've been following for about 15 years now is the consequences of the privatization (and at times mystification) of infrastructure, and the possibilities presented when crucial aspects of infrastructure are not designed to be public in any traditional sense. <a href=\"https://docs.google.com/document/d/1hgLJojU9h8x-zuj4P_p_TcqxUq0zmcsLsufXwVq7lHo/edit?usp=sharing\">My dissertation treats this as a semiotic question by examining secret food supply chains and distribution networks in Dakar, Senegal.</a> <a href=\"https://docs.google.com/document/d/1csd2fSHomwdyd57dVpNNszFTx-uoWLIkcn3BvkQS-IA/edit\">Right now I'm thinking through the logics of contemporary finance capital.</a>"
       ]
     },
     {
