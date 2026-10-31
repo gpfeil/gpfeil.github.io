@@ -75,9 +75,8 @@ window.SITE = {
     },
     {
       added: "2026-10-31",
-      // No title: the whole tile links to the dissertation chapter.
+      title: "semiotics talks to cryptography about containers",
       url: "https://docs.google.com/document/d/1hgLJojU9h8x-zuj4P_p_TcqxUq0zmcsLsufXwVq7lHo/edit?usp=sharing",
-      linkLabel: "Dissertation chapter",
       quote: {
         text: "For something to be disclosed (properly speaking)...requires a mode of enclosure that permits it to move along certain paths, and be opened by certain addressees; and, simultaneously, a mode of enclosure that prohibits it from moving along other paths, or being opened by other addressees. In short, the task of a channel is to protect secrets….",
         cite: "— Kockelman (2017, 71)"
