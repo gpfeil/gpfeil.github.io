@@ -33,7 +33,7 @@
   // Tiles. Text fields may contain simple HTML (links, <em>, <cite>).
   var cards = document.getElementById("cards");
   cards.innerHTML = site.tiles.filter(function (t) { return !t.hidden; }).map(function (t) {
-    var linked = t.url && (t.image || !t.title);
+    var linked = !!t.url; // any tile with a url is clickable all over
     var h = '<li class="cards__item"><article class="card' + (linked ? " card--linked" : "") + '">';
     if (t.image) {
       h += '<img class="card__image" src="' + esc(t.image) + '" alt="' + esc(t.imageAlt || "") + '"' +
