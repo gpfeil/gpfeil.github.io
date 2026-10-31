@@ -37,7 +37,8 @@ window.SITE = {
     },
     {
       added: "2026-10-31",
-      title: "i think so much about containers."
+      title: "i think so much about containers.",
+      url: "https://docs.google.com/document/d/1jKSEZdu0KX2TzSJdCyX19_iWDasX8ahRDEdna0XfXFY/edit?usp=sharing"
     },
     {
       added: "2026-10-29",
