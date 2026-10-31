@@ -15,7 +15,6 @@ Ask Claude ("add a tile about X, with this link/image"), or copy a block in `til
 ## Keys
 
 - `d`: dark mode
-- `Space`: turns the moving light in the frame on or off
 
 ## Publishing on GitHub Pages
 
@@ -23,3 +22,7 @@ Ask Claude ("add a tile about X, with this link/image"), or copy a block in `til
 2. Upload everything in this folder to the repo's root.
 3. Settings → Pages → Deploy from branch → `main` / root.
 4. The site appears at https://gpfeil.github.io within a minute or two.
+
+## Browser caching
+
+`index.html` loads each script and stylesheet with a `?v=` date tag. Change that tag whenever `tiles.js`, `css/` or `js/` changes, so visitors get the new version right away.
