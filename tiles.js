@@ -22,6 +22,8 @@ window.SITE = {
   links: [
     { label: "GitHub", icon: "github", url: "https://github.com/gpfeil" },
     { label: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/gpfeil" },
+    { label: "Google Scholar", icon: "school", url: "https://scholar.google.com/citations?user=LEsKLXQAAAAJ&hl=en" },
+    { label: "Academia.edu", icon: "books", url: "https://barnard.academia.edu/GretchenPfeil" },
     { label: "Website", icon: "web", url: "https://gretchenpfeil.com" },
     { label: "Email", icon: "mail", url: "mailto:gpfeil@protonmail.com" }
   ],
