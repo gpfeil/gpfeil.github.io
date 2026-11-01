@@ -8,6 +8,7 @@
 //   linkLabel what screen readers announce for a tile with no title
 //   image     path like "images/fieldwork.jpg" (put the file in images/)
 //   imageAlt  description of the image for screen readers
+//   video     a YouTube video id (the part after watch?v=), shown at the top
 //   imagePosition  which part of the photo to keep when it's cropped,
 //             e.g. "50% 75%" (centered across, lower down)
 //   text      list of paragraphs (simple HTML allowed: <a>, <em>, <cite>)
@@ -121,6 +122,15 @@ window.SITE = {
       imageAlt: "A printed page reading “Everything not saved will be lost.” — Nintendo “Quit Screen” message",
       kicker: "February 21, 2024",
       title: "Quit screen"
+    },
+    {
+      added: "2026-11-01",
+      video: "dDCGkrnbSSw",
+      videoTitle: "The Subconscious Art of Graffiti Removal",
+      title: "the art of the coverup",
+      text: [
+        "<cite>The Subconscious Art of Graffiti Removal</cite>, a film by Matt McCormick. <a href=\"https://www.youtube.com/watch?v=dDCGkrnbSSw\">Watch on YouTube</a>."
+      ]
     },
     {
       added: "2026-10-29",

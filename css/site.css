@@ -108,6 +108,9 @@ img { height: auto; max-width: 100%; vertical-align: middle; }
 .card__image { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 @media (min-width: 40rem) { .card__image { aspect-ratio: 3 / 2; } }
 
+.card__video iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
+[data-theme="dark"] .card__video { border-bottom: 1px solid var(--rule); }
+
 .card__content {
   display: flex; flex: 1 1 auto; flex-direction: column; justify-content: center;
   min-width: 0; padding: 1rem;

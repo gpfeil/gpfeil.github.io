@@ -37,6 +37,11 @@
   cards.innerHTML = site.tiles.filter(function (t) { return !t.hidden; }).map(function (t) {
     var linked = !!t.url; // any tile with a url is clickable all over
     var h = '<li class="cards__item"><article class="card' + (linked ? " card--linked" : "") + '">';
+    if (t.video) {
+      // YouTube video id; uses the privacy-enhanced (no-cookie) player.
+      h += '<div class="card__video"><iframe src="https://www.youtube-nocookie.com/embed/' + esc(t.video) +
+        '" title="' + esc(t.videoTitle || t.title || "Video") + '" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>';
+    }
     if (t.image) {
       h += '<img class="card__image" src="' + esc(t.image) + '" alt="' + esc(t.imageAlt || "") + '"' +
         (t.imagePosition ? ' style="object-position:' + esc(t.imagePosition) + '"' : '') + ' loading="lazy">';
