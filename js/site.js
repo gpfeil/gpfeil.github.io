@@ -51,7 +51,10 @@
     h += '<div class="card__text">';
     if (t.verse) h += '<pre class="verse">' + esc(t.verse) + '</pre>';
     if (t.quote) {
-      h += '<blockquote><p>' + t.quote.text + '</p>' +
+      var qt = Array.isArray(t.quote.text)
+        ? t.quote.text.map(function (l) { return '<span class="qline">' + l + '</span>'; }).join('')
+        : t.quote.text;
+      h += '<blockquote><p>' + qt + '</p>' +
         (t.quote.cite ? '<p>' + t.quote.cite + '</p>' : '') + '</blockquote>';
     }
     (t.text || []).forEach(function (p) { h += '<p>' + p + '</p>'; });

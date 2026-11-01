@@ -12,7 +12,8 @@
 //             e.g. "50% 75%" (centered across, lower down)
 //   text      list of paragraphs (simple HTML allowed: <a>, <em>, <cite>)
 //   verse     preformatted text, line breaks kept (a poem, a code snippet)
-//   quote     { text: "...", cite: "..." }  boxed quotation with attribution
+//   quote     { text: "...", cite: "..." }  boxed quotation with attribution;
+//             text can be a list of lines (e.g. dialogue)
 //   list      [{ label, url, note }]  a bulleted list of links
 //   added     date the tile was first made (YYYY-MM-DD), shown at the bottom
 //   hidden    true to keep a tile in the file without showing it
@@ -47,6 +48,36 @@ window.SITE = {
         text: "Language thus represents the mass mind.",
         cite: "Benjamin Lee Whorf, <cite>Language, Thought, and Reality</cite> (1956), p. 156"
       }
+    },
+    {
+      added: "2026-10-31",
+      quote: {
+        text: [
+          "“When I use a word,” Humpty Dumpty said, in rather a scornful tone, “it means just what I choose it to mean — neither more nor less.”",
+          "“The question is,” said Alice, “whether you can make words mean so many different things.”",
+          "“The question is,” said Humpty Dumpty, “which is to be master — that’s all.”"
+        ],
+        cite: "Lewis Carroll, <cite>Through the Looking-Glass</cite> (1871), chapter 6"
+      }
+    },
+    {
+      added: "2026-11-01",
+      title: "On voicing in the model",
+      text: [
+        "Does the LLM model the varieties of social personas that exist in the massive corpus of machine readable text that it represents? The human reader hears and experiences these personas all the time, often without being aware they're doing it - and uses them to judge where a piece of language is 'coming from' and thereby, to make complex multifaceted judgements about how trustworthy the source is. Is this kind of complexity represented in the model? If so, how?",
+        "<em>“The word in language is half someone else’s. It becomes ‘one’s own’ only when the speaker populates it with his own intention, his own accent, when he appropriates the word, adapting it to his own semantic and expressive intention.”</em>",
+        "M. M. Bakhtin, “Discourse in the Novel,” in <a href=\"https://utpress.utexas.edu/9780292715349/\"><cite>The Dialogic Imagination</cite></a>, trans. Caryl Emerson and Michael Holquist (University of Texas Press, 1981), p. 293."
+      ]
+    },
+    {
+      added: "2026-11-01",
+      quote: {
+        text: "“…each word tastes of the context and contexts in which it has lived its socially charged life.”",
+        cite: "M. M. Bakhtin, “Discourse in the Novel,” in <a href=\"https://utpress.utexas.edu/9780292715349/\"><cite>The Dialogic Imagination</cite></a>, trans. Caryl Emerson and Michael Holquist (University of Texas Press, 1981), p. 293"
+      },
+      text: [
+        "so much of what i do with claude and how i do it is about preserving the 'taste' of the information i collect, and thereby its evidentiary value, but i don't yet know if the model has any 'taste' for the information on which it was trained."
+      ]
     },
     {
       added: "2026-10-29",

@@ -148,6 +148,9 @@ img { height: auto; max-width: 100%; vertical-align: middle; }
 .card__text ul { padding-left: 1.2rem; }
 .card__text li + li { margin-top: 0.3rem; }
 
+.qline { display: block; }
+.qline + .qline { margin-top: 0.6em; }
+
 .verse { font-size: var(--type-text); white-space: pre-wrap; overflow-x: auto; }
 
 .card__text blockquote {
