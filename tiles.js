@@ -17,6 +17,7 @@
 //             text can be a list of lines (e.g. dialogue)
 //   list      [{ label, url, note }]  a bulleted list of links
 //   added     date the tile was first made (YYYY-MM-DD), shown at the bottom
+//   dateLabel optional wording to show instead of that date (e.g. "Mid-August 2026")
 //   hidden    true to keep a tile in the file without showing it
 
 window.SITE = {
@@ -35,8 +36,23 @@ window.SITE = {
       kicker: "Book in progress",
       title: "Mass Intelligence",
       text: [
-        "A book about AI as the commodification of human intellectual labor: what large language models are a model <em>of</em>, whose language they are built from, and what gets withheld along the way.",
+        "A book about AI as the commodification of human intellectual labor: what large language models model, and how; whose language they are built from; and what gets withheld along the way.",
         "It grows out of my dissertation work on fungibility and discretion, and out of fifteen years of watching people work with complex data systems."
+      ]
+    },
+    {
+      kicker: "About",
+      title: "Where to find me",
+      text: [
+        "I’m a linguistic anthropologist (PhD, University of Chicago) and emerging tech product researcher. For fifteen years I’ve studied how people work with complex flows of information: alms networks in Dakar, the data-rich workspace of JPMorgan Chase’s new global headquarters, and now large language models.",
+        "Through Semiotomatic Research I take on qualitative and mixed-methods engagements in B2B, enterprise workplace, financial/regulated spaces, and data-rich physical environments. I’m also writing <em>Mass Intelligence</em>.",
+        "<a href=\"mailto:gpfeil@protonmail.com\">gpfeil@protonmail.com</a> · <a href=\"https://www.linkedin.com/in/gpfeil\">LinkedIn</a> · <a href=\"https://github.com/gpfeil\">GitHub</a> · <a href=\"https://gretchenpfeil.com\">gretchenpfeil.com</a>"
+      ]
+    },
+    {
+      title: "Data-rich physical environments",
+      text: [
+        "In a data-rich environment, space, people, and software are one system. Current technology represents this system as split in two. Technology collects behavioral data (sensor readings, occupancy, analytics) that records what happened without saying what it meant. LLMs are now asked to manage “meanings.” I’m interested in human-centered technologies to bridge the two: how traces become language, who gets to interpret them, and how to keep what people actually do in a space from being lost or overwritten in the translation."
       ]
     },
     {
@@ -83,16 +99,14 @@ window.SITE = {
       ]
     },
     {
-      added: "2026-10-29",
       kicker: "JPMorgan Chase, 2021–2025",
       title: "Research on the workplace, at the scale of a firm",
       text: [
-        "I built and led JPMC's employee-experience workspace technology research team: hired a team of 10, with practices adopted by 50+ researchers firmwide.",
+        "I founded JPMC’s first multi-product-line orchestration research function, embedded in the work for 270 Park Avenue and the firm’s new data-rich workspace technology. I hired a team of 10 and built practices adopted by 50+ researchers firmwide.",
         "A diary study, passive sensing, and ethnography program for the new global headquarters helped secure a multimillion-dollar infrastructure investment. Research with Deaf and Hard-of-Hearing employees drove global changes to caption display and firmwide accessibility standards that exceed the ADA."
       ]
     },
     {
-      added: "2026-10-29",
       kicker: "Dakar, Senegal",
       title: "Sarax and Sutura",
       text: [
@@ -133,14 +147,13 @@ window.SITE = {
       ]
     },
     {
-      added: "2026-10-29",
+      added: "2026-08-17",
       image: "images/summer-dog.jpg",
       imageAlt: "A tan dog in a blue collar drinking from fans of spray coming off a fire hydrant, beside a parked car",
       imagePosition: "50% 75%",
       title: "one of my dogs in the summertime"
     },
     {
-      added: "2026-10-29",
       kicker: "Barnard College, 2021",
       title: "The Phi Beta Kappa address",
       text: [
@@ -157,12 +170,11 @@ window.SITE = {
       ]
     },
     {
-      added: "2026-10-29",
       kicker: "2025–present",
       title: "Semiotomatic Research",
       url: "https://gretchenpfeil.com",
       text: [
-        "My research consultancy: qualitative and mixed-methods research on how people work with complex data flows, from fintech to workplace technology."
+        "My research consultancy: qualitative and mixed-methods research on how people work with complex data flows in B2B, enterprise workplace, financial/regulated spaces, and data-rich physical environments. Available for engagements: <a href=\"mailto:gpfeil@protonmail.com\">gpfeil@protonmail.com</a>"
       ]
     }
   ]

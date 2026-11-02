@@ -74,7 +74,7 @@
     h += '</div>';
     if (t.added) {
       var d = new Date(t.added + "T12:00:00");
-      var label = isNaN(d) ? t.added : d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+      var label = t.dateLabel || (isNaN(d) ? t.added : d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }));
       h += '<p class="card__date"><time datetime="' + esc(t.added) + '">' + esc(label) + '</time></p>';
     }
     h += '</div></article></li>';
