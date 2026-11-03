@@ -227,3 +227,21 @@ img { height: auto; max-width: 100%; vertical-align: middle; }
 [data-theme="dark"] .essay__epigraph p + p { color: #c8c8c8; }
 [data-theme="dark"] .essay__date { color: #8a8ab8; }
 [data-theme="dark"] .essay__epigraph { border-color: var(--rule); }
+
+/* Trace figure in essays */
+.essay__figure { margin: 2rem 0; }
+.essay__figure figcaption { margin-top: 0.6rem; color: var(--gray-dark); font-size: var(--type-text); line-height: 1.45; }
+.trace-fig { display: block; width: 100%; height: auto; font-family: "Times New Roman", Times, serif; }
+.trace-fig text { fill: var(--ink); font-size: 13px; }
+.trace-fig .tf-label { fill: var(--gray-dark); font-size: 11px; letter-spacing: 0.06em; }
+.trace-fig .tf-spans rect { fill: var(--link); opacity: 0.75; }
+.trace-fig .tf-spans .tf-root { opacity: 0.35; }
+.trace-fig .tf-ground { stroke: var(--ink); stroke-width: 1; }
+.trace-fig .tf-threads path { fill: none; stroke: var(--gray); stroke-width: 1; stroke-dasharray: 2 3; }
+.trace-fig .tf-notes circle { fill: var(--gray-dark); }
+.trace-fig .tf-notes text { fill: var(--gray-darker); font-style: italic; font-size: 12px; }
+[data-theme="dark"] .essay__figure figcaption,
+[data-theme="dark"] .trace-fig .tf-label { color: #c8c8c8; fill: #c8c8c8; }
+[data-theme="dark"] .trace-fig .tf-notes text { fill: #d8d8d8; }
+[data-theme="dark"] .trace-fig .tf-notes circle { fill: #c080d0; }
+[data-theme="dark"] .trace-fig .tf-threads path { stroke: #c080d0; }

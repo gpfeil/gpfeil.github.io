@@ -9,8 +9,8 @@
 <meta property="og:description" content="An AI agent’s trace records every step it took, but not whether the work was good, what it really cost or when someone should have stepped in.">
 <meta property="og:type" content="article">
 <meta name="theme-color" content="#f6f6f6">
-<script src="../js/keys.js?v=2026-11-03a"></script>
-<link rel="stylesheet" href="../css/site.css?v=2026-11-03a">
+<script src="../js/keys.js?v=2026-11-03b"></script>
+<link rel="stylesheet" href="../css/site.css?v=2026-11-03b">
 </head>
 <body>
 
@@ -48,6 +48,57 @@
   <p>In my dissertation, on hidden networks of exchange in Dakar, I borrowed the image of a fungal fairy ring. Above ground you see a circle of toadstools, as if each had decided separately to stand there. The organism is underground: a mass of threads, the mycelium, of which the toadstools are only the visible fruit.</p>
 
   <p>A trace is the toadstool. What makes an agent trustworthy grows underground. “Did it work?” depends on what the run was for and who relies on it, and those standards are often settled only in use. Researchers studying how developers grade model outputs found that people need criteria to judge outputs, but judging outputs is how they work out the criteria (<a href="https://arxiv.org/abs/2404.12272">Shankar et al. 2024</a>). “What did it cost?” includes the afternoon an engineer spends rerunning a job to see whether a failure repeats, which no token count records. “When should I step in?” depends on stakes and on who will be blamed, which are organizational facts. Bainbridge’s irony applies: automation leaves people the hardest part of the job, taking over when things go wrong, while wearing down the skills they need to do it. Madeleine Clare Elish later showed that when automated systems fail, responsibility tends to land on the person with the least control, in what she calls a “moral crumple zone” (<a href="https://estsjournal.org/index.php/ests/article/view/260">Elish 2019</a>).</p>
+
+
+  <figure class="essay__figure">
+<svg class="trace-fig" viewBox="0 0 560 400" role="img" aria-labelledby="tf-title tf-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="tf-title">A trace, and what grows underneath it</title>
+  <desc id="tf-desc">Above a line, an agent trace: nested spans for model calls, tool calls and a handoff. Below the line, unrecorded threads of human work: rerunning the job, reading output line by line, checking it against what the run was for, deciding to accept it, and knowing who will be blamed.</desc>
+  <text class="tf-label" x="0" y="16">RECORDED IN THE TRACE</text>
+  <g class="tf-spans">
+    <text x="0" y="51">agent run</text>        <rect class="tf-root" x="170" y="40" width="380" height="14" rx="3"/>
+    <text x="12" y="77">model call · plan</text> <rect x="172" y="66" width="62" height="14" rx="3"/>
+    <text x="12" y="103">tool call · search</text><rect x="238" y="92" width="84" height="14" rx="3"/>
+    <text x="12" y="129">model call</text>        <rect x="326" y="118" width="40" height="14" rx="3"/>
+    <text x="12" y="155">tool call · run code</text><rect x="370" y="144" width="92" height="14" rx="3"/>
+    <text x="12" y="181">handoff</text>           <rect x="466" y="170" width="24" height="14" rx="3"/>
+    <text x="12" y="207">model call · summary</text><rect x="494" y="196" width="54" height="14" rx="3"/>
+  </g>
+  <line class="tf-ground" x1="0" y1="236" x2="560" y2="236"/>
+  <text class="tf-label" x="560" y="256" text-anchor="end">NOT RECORDED</text>
+  <g class="tf-threads">
+    <path d="M24 236 C 10 256, 14 271, 4 286"/>
+    <path d="M132 236 C 118 269, 122 293, 112 318"/>
+    <path d="M240 236 C 226 261, 230 279, 220 298"/>
+    <path d="M348 236 C 334 275, 338 305, 328 334"/>
+    <path d="M456 236 C 442 264, 446 285, 436 306"/>
+    <path d="M4 286 C 0 346, 82 392, 106 358 S 112 328, 112 318"/>
+    <path d="M112 318 C 108 378, 190 392, 214 338 S 220 308, 220 298"/>
+    <path d="M220 298 C 216 358, 298 392, 322 374 S 328 344, 328 334"/>
+    <path d="M328 334 C 324 394, 406 392, 430 346 S 436 316, 436 306"/>
+  </g>
+  <g class="tf-notes">
+    <circle cx="4" cy="286" r="2.5"/>
+    <text x="12" y="290">reran the job to</text>
+    <text x="12" y="305">see if a failure</text>
+    <text x="12" y="320">repeats</text>
+    <circle cx="112" cy="318" r="2.5"/>
+    <text x="120" y="322">read the output</text>
+    <text x="120" y="337">line by line</text>
+    <circle cx="220" cy="298" r="2.5"/>
+    <text x="228" y="302">checked it against</text>
+    <text x="228" y="317">the run’s purpose</text>
+    <circle cx="328" cy="334" r="2.5"/>
+    <text x="336" y="338">decided to</text>
+    <text x="336" y="353">accept it</text>
+    <circle cx="436" cy="306" r="2.5"/>
+    <text x="444" y="310">knew who would be</text>
+    <text x="444" y="325">blamed if it</text>
+    <text x="444" y="340">was wrong</text>
+  </g>
+</svg>
+  <figcaption>A trace records the spans above the line. The work that makes a run trustworthy happens below it, and leaves no record.</figcaption>
+  </figure>
 
   <p>In Dakar, the hidden exchanges made each woman appear to act alone; her public strength was the visible sum of ties no one else could see. Agents get the same treatment. When the checking, rerunning and judging go unrecorded, the agent appears to have done the work by itself, and the people who made it trustworthy drop out of the account. In a data-rich environment, space, people and software are one system. The trace records the software and presents it as the whole.</p>
 
