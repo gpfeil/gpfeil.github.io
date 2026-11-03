@@ -50,6 +50,7 @@ window.SITE = {
       ]
     },
     {
+      added: "2026-11-02",
       title: "Data-rich physical environments",
       text: [
         "In a data-rich environment, space, people, and software are one system. Current technology represents this system as split in two. Technology collects behavioral data (sensor readings, occupancy, analytics) that records what happened without saying what it meant. LLMs are now asked to manage “meanings.” I’m interested in human-centered technologies to bridge the two: how traces become language, who gets to interpret them, and how to keep what people actually do in a space from being lost or overwritten in the translation."
