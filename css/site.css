@@ -194,3 +194,36 @@ img { height: auto; max-width: 100%; vertical-align: middle; }
 @media (prefers-reduced-motion: reduce) {
   .site-header__links svg, .card { transition: none; }
 }
+
+/* Essay pages (essays/*.html) */
+.essay {
+  max-width: 40rem;
+  margin: 1.5rem auto 3rem;
+  padding: 0 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+.essay__title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.essay__dek { margin: 0.4rem 0 0; color: var(--gray-dark); font-style: italic; }
+.essay__date { margin: 0.4rem 0 2rem; color: var(--gray); font-size: var(--type-small); }
+.essay h2 { margin: 2.25rem 0 0.5rem; font-size: 1.35rem; font-weight: 400; }
+.essay p { margin: 0 0 1rem; }
+.essay ol { padding-left: 1.4rem; }
+.essay li + li { margin-top: 0.5rem; }
+.essay__epigraph {
+  margin: 0 0 2rem;
+  padding: 0 0 0 1rem;
+  border-left: 2px solid var(--gray-lighter);
+}
+.essay__epigraph p { margin: 0; }
+.essay__epigraph p + p { margin-top: 0.4rem; color: var(--gray-dark); font-size: var(--type-text); }
+.essay__back { margin-top: 2.5rem; font-size: var(--type-text); }
+[data-theme="dark"] .essay__dek,
+[data-theme="dark"] .essay__epigraph p + p { color: #c8c8c8; }
+[data-theme="dark"] .essay__date { color: #8a8ab8; }
+[data-theme="dark"] .essay__epigraph { border-color: var(--rule); }

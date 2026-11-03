@@ -56,6 +56,15 @@ window.SITE = {
       ]
     },
     {
+      added: "2026-11-03",
+      kicker: "Essay",
+      title: "What the trace doesn’t say",
+      url: "essays/what-the-trace-doesnt-say.html",
+      text: [
+        "An AI agent’s trace records every step it took, but not whether the work was good, what it really cost or when someone should have stepped in. An essay on reading agents the way an anthropologist reads any index: as evidence of what goes together, not a statement of what it means."
+      ]
+    },
+    {
       added: "2026-10-31",
       title: "i think so much about containers.",
       url: "https://docs.google.com/document/d/1jKSEZdu0KX2TzSJdCyX19_iWDasX8ahRDEdna0XfXFY/edit?usp=sharing"

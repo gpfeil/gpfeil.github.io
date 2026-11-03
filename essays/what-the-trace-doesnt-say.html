@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What the trace doesn’t say · Gretchen Pfeil</title>
+<meta name="description" content="An AI agent’s trace records every step it took, but not whether the work was good, what it really cost or when someone should have stepped in.">
+<meta property="og:title" content="What the trace doesn’t say">
+<meta property="og:description" content="An AI agent’s trace records every step it took, but not whether the work was good, what it really cost or when someone should have stepped in.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#f6f6f6">
+<script src="../js/keys.js?v=2026-11-03a"></script>
+<link rel="stylesheet" href="../css/site.css?v=2026-11-03a">
+</head>
+<body>
+
+<header class="site-header">
+  <p class="site-header__name"><a href="../">Gretchen Pfeil</a></p>
+</header>
+
+<main>
+<article class="essay">
+  <h1 class="essay__title">What the trace doesn’t say</h1>
+  <p class="essay__dek">On understanding AI agents from the data they produce</p>
+  <p class="essay__date"><time datetime="2026-11-03">November 3, 2026</time></p>
+
+  <blockquote class="essay__epigraph">
+    <p>“Automation can make the difficult parts of the human operator’s task more difficult.”</p>
+    <p>— Lisanne Bainbridge, <a href="https://gwern.net/doc/sociology/technology/1983-bainbridge.pdf">“Ironies of Automation”</a> (1983)</p>
+  </blockquote>
+
+  <p>Picture a meeting-room table in a New York office, covered in devices. Laptops and phones, each one moving data, usually more than one device per person seated at the table. One person is sharing a screen to the display at the end of the room. Someone else is presenting to remote colleagues. The rest are each doing something else, often several things. Every one of those devices is on Wi-Fi.</p>
+
+  <p>At JPMorgan Chase, I founded the research function for the firm’s new headquarters at 270 Park Avenue and its data-rich workspace technology. The building wasn’t finished while I did this work, so the research ran in the offices people were already using, and fed into the design of the new one. Leadership assumed that soft seating, the lounges and open areas, would drive demand for Wi-Fi. I sourced access-point and network logs from the New York offices and built heatmaps by zone and peak time. The heaviest use was in conference rooms and at desks that were already wired.</p>
+
+  <p>The logs settled where the demand was. They couldn’t say what it was. That took observation. The meeting-room traffic was work: a table of separate devices, some feeding a shared screen and people on a call, some holding notes and spreadsheets from which people spoke. The traffic in soft seating, once you watched it, made more sense as people watching TikTok on their lunch breaks. Both showed up as the same thing in the logs: data moving. The firm invested in the network at 270 Park around where and how people actually worked.</p>
+
+  <h2>The trace is an index</h2>
+
+  <p>Linguistic anthropologists have a useful word for what those logs were. An <em>index</em> is a sign that points to something because the two occur together, in space, in time or in context. Smoke and fire are the classic example, but so are the word “here” and the place it’s said, an accent and the region it comes from. Cause is only one kind of co-occurrence, and often hard to tell apart from the others. An index is good evidence that what it usually goes with is there too. It doesn’t tell you what their going together means.</p>
+
+  <p>An AI agent’s trace is an index in exactly this sense. An agent is software that takes a goal, breaks it into steps and carries them out with some independence: calling a model, searching, running code, using tools. Most observability tools record its work the same way. A <em>trace</em> is one end-to-end run, made of <em>spans</em>: timed steps nested inside one another, one for each model call, tool call or handoff between agents, each with its inputs and outputs, duration, token count and cost (<a href="https://openai.github.io/openai-agents-python/tracing/">OpenAI</a>, <a href="https://www.arize.com/docs/phoenix/tracing/llm-traces">Arize Phoenix</a>). It is a faithful record of what the agent did.</p>
+
+  <p>The people who run agents bring four questions to that record. What did it do? Did it work? What did it cost? When should I step in? The trace answers the first. The other three are questions about meaning, and the answers mostly live somewhere else.</p>
+
+  <h2>Toadstools and mycelium</h2>
+
+  <p>In my dissertation, on hidden networks of exchange in Dakar, I borrowed the image of a fungal fairy ring. Above ground you see a circle of toadstools, as if each had decided separately to stand there. The organism is underground: a mass of threads, the mycelium, of which the toadstools are only the visible fruit.</p>
+
+  <p>A trace is the toadstool. What makes an agent trustworthy grows underground. “Did it work?” depends on what the run was for and who relies on it, and those standards are often settled only in use. Researchers studying how developers grade model outputs found that people need criteria to judge outputs, but judging outputs is how they work out the criteria (<a href="https://arxiv.org/abs/2404.12272">Shankar et al. 2024</a>). “What did it cost?” includes the afternoon an engineer spends rerunning a job to see whether a failure repeats, which no token count records. “When should I step in?” depends on stakes and on who will be blamed, which are organizational facts. Bainbridge’s irony applies: automation leaves people the hardest part of the job, taking over when things go wrong, while wearing down the skills they need to do it. Madeleine Clare Elish later showed that when automated systems fail, responsibility tends to land on the person with the least control, in what she calls a “moral crumple zone” (<a href="https://estsjournal.org/index.php/ests/article/view/260">Elish 2019</a>).</p>
+
+  <p>In Dakar, the hidden exchanges made each woman appear to act alone; her public strength was the visible sum of ties no one else could see. Agents get the same treatment. When the checking, rerunning and judging go unrecorded, the agent appears to have done the work by itself, and the people who made it trustworthy drop out of the account. In a data-rich environment, space, people and software are one system. The trace records the software and presents it as the whole.</p>
+
+  <h2>More visibility isn’t the answer</h2>
+
+  <p>The usual response is to show more: the agent’s plan, its steps, its reasoning. Agent builders recommend exactly this (<a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic 2024</a>). I argue it isn’t enough, and can make things worse. In one study, AI explanations made people more likely to accept a recommendation whether or not it was correct (<a href="https://arxiv.org/abs/2006.14779">Bansal et al. 2021</a>).</p>
+
+  <p>Agents add a further twist, because much of what they show is language: plans, summaries, accounts of their own reasoning. Those work differently from the trace. The trace points to the work; the narration describes it, fluently and plausibly. Is this, like most human explanations of their own behavior, a post hoc just-so story (<a href="https://deepblue.lib.umich.edu/handle/2027.42/92167">Nisbett and Wilson 1977</a>; <a href="https://arxiv.org/abs/2305.04388">Turpin et al. 2023</a>)? The reader has to keep track of which part of the screen is a record and which part is a story.</p>
+
+  <h2>How people actually read agents</h2>
+
+  <p>The people who debug agents are already doing something close to fieldwork. One practitioner guide starts with reading traces by hand, writing open-ended notes and sorting them into a taxonomy of failures: qualitative coding, in other words (<a href="https://hamel.dev/blog/posts/evals-faq/why-is-error-analysis-so-important-in-llm-evals-and-how-is-it-performed.html">Husain and Shankar 2025</a>).</p>
+
+  <p>These questions come from my current ethnographic fieldwork with practitioners in agentic AI security. A problem at the center of that work is checking machine-generated code at all, when it arrives at a speed and volume no one can read line by line. Checking, comparing, rerunning, deciding to accept: that work happens beside the trace and mostly leaves no record in it. My own rule for research with AI tools is that AI can find, organize and check sources, but I verify every claim and build the argument, and nothing is cited to the AI itself (<a href="https://github.com/gpfeil/research-toolkit">research-toolkit</a>). The verifying is work. It is professional judgment, and it belongs in the picture.</p>
+
+  <p>Ethnography shows that work: what people do with agent data and how they do it. What they look at first, what they skip, what makes them stop trusting a run, how they check a result, when they escalate and to whom. A dashboard shows the toadstools. Ethnography maps the mycelium.</p>
+
+  <h2>Designing for the reader</h2>
+
+  <p>If people read traces, traces should be built as reading instruments. Record what a run was for next to what it did. Make human checking part of the record, so a team can see what was verified and by whom. Count cost in people’s time as well as tokens. Design for the handoff, because the person reading a trace is often not the person who launched the agent.</p>
+
+  <p>None of that can be designed from telemetry alone. It starts with research on the people who run agents, and three questions:</p>
+
+  <ol>
+    <li><strong>Who are they?</strong> Who reads agent data, and what are they responsible for when something goes wrong?</li>
+    <li><strong>What do they decide?</strong> Which decisions do they make from agent data: to accept a result, rerun it, roll it back, escalate, or stop the agent?</li>
+    <li><strong>Where do the signals fail them?</strong> Where do they leave the dashboard to check something by hand, and what are they looking for when they do?</li>
+  </ol>
+
+  <p class="essay__back"><a href="../">← Back to all tiles</a></p>
+</article>
+</main>
+
+<script data-goatcounter="https://gpfeil.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
