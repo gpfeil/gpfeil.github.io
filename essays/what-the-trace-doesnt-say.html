@@ -8,9 +8,12 @@
 <meta property="og:title" content="What the trace doesn’t say">
 <meta property="og:description" content="An AI agent’s trace records every step it took, but not whether the work was good, what it really cost or when someone should have stepped in.">
 <meta property="og:type" content="article">
+<meta property="og:image" content="https://gpfeil.github.io/images/mycelium.jpg">
+<meta property="og:image:alt" content="Mushrooms growing out of soil, with white mycelium threads beneath them.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f6f6f6">
-<script src="../js/keys.js?v=2026-11-03b"></script>
-<link rel="stylesheet" href="../css/site.css?v=2026-11-03b">
+<script src="../js/keys.js?v=2026-11-04b"></script>
+<link rel="stylesheet" href="../css/site.css?v=2026-11-04b">
 </head>
 <body>
 
@@ -23,6 +26,11 @@
   <h1 class="essay__title">What the trace doesn’t say</h1>
   <p class="essay__dek">On understanding AI agents from the data they produce</p>
   <p class="essay__date"><time datetime="2026-11-03">November 3, 2026</time></p>
+
+  <figure class="essay__photo">
+    <img src="../images/mycelium.jpg" alt="White button mushrooms growing out of dark soil, with white threads of mycelium spreading through the soil beneath them." width="960" height="432">
+    <figcaption>Mushrooms and the mycelium they grow from. Photo: Iryna Buchnieva, <a href="https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B5%D1%87%D0%B5%D1%80%D0%B8%D1%86%D1%96_%D0%B7_%D0%BC%D1%96%D1%86%D0%B5%D0%BB%D1%96%D1%94%D0%BC.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>.</figcaption>
+  </figure>
 
   <blockquote class="essay__epigraph">
     <p>“Automation can make the difficult parts of the human operator’s task more difficult.”</p>
@@ -51,53 +59,132 @@
 
 
   <figure class="essay__figure">
-<svg class="trace-fig" viewBox="0 0 560 400" role="img" aria-labelledby="tf-title tf-desc" xmlns="http://www.w3.org/2000/svg">
+<svg class="trace-fig" viewBox="0 -18 560 438" role="img" aria-labelledby="tf-title tf-desc" xmlns="http://www.w3.org/2000/svg">
   <title id="tf-title">A trace, and what grows underneath it</title>
-  <desc id="tf-desc">Above a line, an agent trace: nested spans for model calls, tool calls and a handoff. Below the line, unrecorded threads of human work: rerunning the job, reading output line by line, checking it against what the run was for, deciding to accept it, and knowing who will be blamed.</desc>
-  <text class="tf-label" x="0" y="16">RECORDED IN THE TRACE</text>
-  <g class="tf-spans">
-    <text x="0" y="51">agent run</text>        <rect class="tf-root" x="170" y="40" width="380" height="14" rx="3"/>
-    <text x="12" y="77">model call · plan</text> <rect x="172" y="66" width="62" height="14" rx="3"/>
-    <text x="12" y="103">tool call · search</text><rect x="238" y="92" width="84" height="14" rx="3"/>
-    <text x="12" y="129">model call</text>        <rect x="326" y="118" width="40" height="14" rx="3"/>
-    <text x="12" y="155">tool call · run code</text><rect x="370" y="144" width="92" height="14" rx="3"/>
-    <text x="12" y="181">handoff</text>           <rect x="466" y="170" width="24" height="14" rx="3"/>
-    <text x="12" y="207">model call · summary</text><rect x="494" y="196" width="54" height="14" rx="3"/>
+  <desc id="tf-desc">Above the ground line, an agent trace: nested spans for model calls, tool calls and a handoff, each on a thin stalk like a mushroom. Below the ground, in the soil, white threads of unrecorded human work connect them: rerunning the job, reading the output line by line, checking it against the run’s purpose, deciding to accept it, and knowing who would be blamed if it was wrong.</desc>
+  <text class="tf-label" x="16" y="16">RECORDED IN THE TRACE</text>
+  <g class="tf-stalks">
+    <line x1="182" y1="80" x2="182" y2="236"/>
+    <line x1="248" y1="106" x2="248" y2="236"/>
+    <line x1="336" y1="132" x2="336" y2="236"/>
+    <line x1="380" y1="158" x2="380" y2="236"/>
+    <line x1="476" y1="184" x2="476" y2="236"/>
+    <line x1="500" y1="210" x2="500" y2="236"/>
   </g>
-  <line class="tf-ground" x1="0" y1="236" x2="560" y2="236"/>
-  <text class="tf-label" x="560" y="256" text-anchor="end">NOT RECORDED</text>
-  <g class="tf-threads">
-    <path d="M24 236 C 10 256, 14 271, 4 286"/>
-    <path d="M132 236 C 118 269, 122 293, 112 318"/>
-    <path d="M240 236 C 226 261, 230 279, 220 298"/>
-    <path d="M348 236 C 334 275, 338 305, 328 334"/>
-    <path d="M456 236 C 442 264, 446 285, 436 306"/>
-    <path d="M4 286 C 0 346, 82 392, 106 358 S 112 328, 112 318"/>
-    <path d="M112 318 C 108 378, 190 392, 214 338 S 220 308, 220 298"/>
-    <path d="M220 298 C 216 358, 298 392, 322 374 S 328 344, 328 334"/>
-    <path d="M328 334 C 324 394, 406 392, 430 346 S 436 316, 436 306"/>
+  <g class="tf-spans">
+    <text x="16" y="51">agent run</text><rect class="tf-root" x="170" y="40" width="374" height="14" rx="7"/>
+    <text x="28" y="77">model call · plan</text><rect x="172" y="66" width="62" height="14" rx="7"/>
+    <text x="28" y="103">tool call · search</text><rect x="238" y="92" width="84" height="14" rx="7"/>
+    <text x="28" y="129">model call</text><rect x="326" y="118" width="40" height="14" rx="7"/>
+    <text x="28" y="155">tool call · run code</text><rect x="370" y="144" width="92" height="14" rx="7"/>
+    <text x="28" y="181">handoff</text><rect x="466" y="170" width="24" height="14" rx="7"/>
+    <text x="28" y="207">model call · summary</text><rect x="490" y="196" width="54" height="14" rx="7"/>
+  </g>
+  <rect class="tf-soil" x="0" y="236" width="560" height="184" rx="10"/>
+  <path class="tf-soil" d="M0 236 H560 V248 H0 Z"/>
+  <text class="tf-label tf-label--soil" x="16" y="258">NOT RECORDED</text>
+  <g class="tf-hyphae">
+    <path d="M182.0 236.0 C 179.9 281.0, 58.0 291.0, 72.0 346.0"/>
+    <path d="M182.0 236.0 C 180.5 281.0, 177.9 291.0, 176.0 346.0"/>
+    <path d="M248.0 236.0 C 248.0 281.0, 187.9 291.0, 176.0 346.0"/>
+    <path d="M248.0 236.0 C 250.2 281.0, 275.2 291.0, 280.0 346.0"/>
+    <path d="M336.0 236.0 C 337.2 281.0, 264.1 291.0, 280.0 346.0"/>
+    <path d="M380.0 236.0 C 381.7 281.0, 367.6 291.0, 384.0 346.0"/>
+    <path d="M380.0 236.0 C 378.1 281.0, 279.3 291.0, 280.0 346.0"/>
+    <path d="M476.0 236.0 C 476.6 281.0, 473.2 291.0, 488.0 346.0"/>
+    <path d="M500.0 236.0 C 503.3 281.0, 474.0 291.0, 488.0 346.0"/>
+    <path d="M72.0 346.0 C 102.0 306.0, 146.0 304.0, 176.0 346.0"/>
+    <path d="M176.0 346.0 C 206.0 306.0, 250.0 304.0, 280.0 346.0"/>
+    <path d="M280.0 346.0 C 310.0 306.0, 354.0 304.0, 384.0 346.0"/>
+    <path d="M384.0 346.0 C 414.0 306.0, 458.0 304.0, 488.0 346.0"/>
+    <path d="M72.0 346.0 C 44.0 316.0, 24.0 286.0, 16.0 276.0"/>
+    <path d="M488.0 346.0 C 516.0 316.0, 536.0 291.0, 544.0 284.0"/>
+  </g>
+  <g class="tf-twigs">
+    <path d="M106.0 295.4 Q 112.6 301.1, 117.9 300.3"/>
+    <path d="M160.4 265.5 Q 162.4 262.5, 170.9 260.6"/>
+    <path d="M86.6 308.6 Q 91.3 305.4, 94.7 303.8"/>
+    <path d="M75.2 321.7 Q 82.4 324.7, 90.8 327.0"/>
+    <path d="M116.1 289.8 Q 115.7 283.7, 114.0 275.4"/>
+    <path d="M181.3 253.8 Q 187.8 255.2, 189.9 257.1"/>
+    <path d="M177.3 316.9 Q 180.7 310.3, 181.0 307.9"/>
+    <path d="M178.9 290.0 Q 176.9 302.2, 178.2 306.6"/>
+    <path d="M181.0 258.3 Q 186.3 250.2, 184.7 243.4"/>
+    <path d="M177.1 320.4 Q 181.8 321.8, 189.1 325.6"/>
+    <path d="M244.2 254.3 Q 245.2 253.8, 253.2 250.0"/>
+    <path d="M207.9 295.1 Q 201.9 300.3, 192.4 299.2"/>
+    <path d="M229.6 274.7 Q 224.6 270.4, 219.6 270.5"/>
+    <path d="M233.4 270.7 Q 226.8 274.9, 226.8 279.9"/>
+    <path d="M215.2 288.3 Q 210.1 296.5, 201.6 296.8"/>
+    <path d="M254.0 266.7 Q 254.1 267.5, 261.9 263.1"/>
+    <path d="M252.8 263.1 Q 256.2 265.2, 257.8 270.2"/>
+    <path d="M251.5 258.8 Q 244.1 256.7, 237.4 248.7"/>
+    <path d="M275.5 319.5 Q 271.7 322.2, 269.6 331.2"/>
+    <path d="M266.3 294.2 Q 269.4 289.7, 273.5 291.4"/>
+    <path d="M300.1 289.5 Q 296.0 278.5, 298.7 272.1"/>
+    <path d="M313.9 276.7 Q 310.8 281.9, 308.1 293.2"/>
+    <path d="M305.8 284.2 Q 296.6 282.9, 294.1 287.9"/>
+    <path d="M316.3 274.5 Q 321.4 265.7, 326.1 261.7"/>
+    <path d="M279.3 319.5 Q 284.2 311.1, 284.9 306.0"/>
+    <path d="M376.5 310.2 Q 378.5 318.9, 376.0 327.1"/>
+    <path d="M376.2 304.8 Q 380.8 303.2, 380.5 296.5"/>
+    <path d="M376.0 301.8 Q 382.3 310.4, 384.8 311.1"/>
+    <path d="M376.2 305.7 Q 376.2 313.8, 377.1 314.8"/>
+    <path d="M378.3 322.9 Q 370.0 320.7, 368.0 318.9"/>
+    <path d="M286.6 322.6 Q 288.0 322.6, 284.7 329.3"/>
+    <path d="M315.0 296.0 Q 307.9 289.8, 301.2 288.8"/>
+    <path d="M301.9 305.6 Q 305.3 314.6, 309.1 319.7"/>
+    <path d="M372.1 255.6 Q 376.6 253.6, 386.6 245.1"/>
+    <path d="M300.3 307.0 Q 308.2 310.3, 313.7 316.0"/>
+    <path d="M476.1 249.8 Q 468.8 250.5, 462.7 245.3"/>
+    <path d="M479.4 308.6 Q 482.9 314.1, 486.4 315.4"/>
+    <path d="M476.1 273.3 Q 478.6 264.1, 474.5 257.2"/>
+    <path d="M476.4 282.2 Q 477.3 293.5, 472.9 298.8"/>
+    <path d="M476.1 259.2 Q 483.4 263.7, 486.4 266.5"/>
+    <path d="M498.6 260.1 Q 495.9 256.2, 496.1 252.1"/>
+    <path d="M489.5 288.7 Q 484.7 284.0, 483.9 282.8"/>
+    <path d="M485.4 304.3 Q 484.9 298.6, 485.4 291.1"/>
+    <path d="M490.6 285.4 Q 490.6 295.1, 490.5 300.0"/>
+    <path d="M490.6 285.5 Q 498.1 293.5, 498.8 295.3"/>
+    <path d="M96.9 323.1 Q 97.4 325.4, 98.8 334.5"/>
+    <path d="M99.9 321.4 Q 109.7 315.9, 113.2 315.9"/>
+    <path d="M139.1 317.4 Q 141.2 311.2, 135.7 309.5"/>
+    <path d="M262.0 327.1 Q 261.1 320.7, 265.6 315.3"/>
+    <path d="M226.5 315.3 Q 225.3 318.3, 230.5 323.5"/>
+    <path d="M211.8 318.1 Q 211.4 326.4, 213.8 332.7"/>
+    <path d="M330.2 315.3 Q 342.3 308.9, 346.9 308.8"/>
+    <path d="M309.9 320.5 Q 319.4 325.4, 324.8 325.2"/>
+    <path d="M300.7 325.7 Q 291.5 325.1, 288.8 331.6"/>
+    <path d="M448.8 316.7 Q 450.8 315.4, 450.6 309.1"/>
+    <path d="M399.6 329.5 Q 396.2 325.9, 393.4 325.0"/>
+    <path d="M437.6 315.3 Q 429.5 314.8, 428.6 311.0"/>
+    <path d="M22.1 284.1 Q 15.0 281.0, 12.7 280.9"/>
+    <path d="M47.1 317.1 Q 42.1 315.6, 40.7 309.2"/>
+    <path d="M539.5 288.5 Q 543.0 285.4, 546.3 286.3"/>
+    <path d="M519.7 310.7 Q 517.3 320.3, 514.1 323.7"/>
   </g>
   <g class="tf-notes">
-    <circle cx="4" cy="286" r="2.5"/>
-    <text x="12" y="290">reran the job to</text>
-    <text x="12" y="305">see if a failure</text>
-    <text x="12" y="320">repeats</text>
-    <circle cx="112" cy="318" r="2.5"/>
-    <text x="120" y="322">read the output</text>
-    <text x="120" y="337">line by line</text>
-    <circle cx="220" cy="298" r="2.5"/>
-    <text x="228" y="302">checked it against</text>
-    <text x="228" y="317">the run’s purpose</text>
-    <circle cx="328" cy="334" r="2.5"/>
-    <text x="336" y="338">decided to</text>
-    <text x="336" y="353">accept it</text>
-    <circle cx="436" cy="306" r="2.5"/>
-    <text x="444" y="310">knew who would be</text>
-    <text x="444" y="325">blamed if it</text>
-    <text x="444" y="340">was wrong</text>
+    <circle cx="72" cy="346" r="3"/>
+    <text x="72" y="365" text-anchor="middle">reran the job</text>
+    <text x="72" y="379" text-anchor="middle">to see if a</text>
+    <text x="72" y="393" text-anchor="middle">failure repeats</text>
+    <circle cx="176" cy="346" r="3"/>
+    <text x="176" y="365" text-anchor="middle">read the output</text>
+    <text x="176" y="379" text-anchor="middle">line by line</text>
+    <circle cx="280" cy="346" r="3"/>
+    <text x="280" y="365" text-anchor="middle">checked it</text>
+    <text x="280" y="379" text-anchor="middle">against the</text>
+    <text x="280" y="393" text-anchor="middle">run’s purpose</text>
+    <circle cx="384" cy="346" r="3"/>
+    <text x="384" y="365" text-anchor="middle">decided to</text>
+    <text x="384" y="379" text-anchor="middle">accept it</text>
+    <circle cx="488" cy="346" r="3"/>
+    <text x="488" y="365" text-anchor="middle">knew who</text>
+    <text x="488" y="379" text-anchor="middle">would be blamed</text>
+    <text x="488" y="393" text-anchor="middle">if it was wrong</text>
   </g>
 </svg>
-  <figcaption>A trace records the spans above the line. The work that makes a run trustworthy happens below it, and leaves no record.</figcaption>
+  <figcaption>A trace records the spans above the line. What makes a run trustworthy happens below it.</figcaption>
   </figure>
 
   <p>In Dakar, the hidden exchanges made each woman appear to act alone; her public strength was the visible sum of ties no one else could see. Agents get the same treatment. When the checking, rerunning and judging go unrecorded, the agent appears to have done the work by itself, and the people who made it trustworthy drop out of the account. In a data-rich environment, space, people and software are one system. The trace records the software and presents it as the whole.</p>
