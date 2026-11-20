@@ -253,3 +253,8 @@ img { height: auto; max-width: 100%; vertical-align: middle; }
 .essay__photo img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
 .essay__photo figcaption { margin-top: 0.5rem; color: var(--gray-dark); font-size: var(--type-small); line-height: 1.4; }
 [data-theme="dark"] .essay__photo figcaption { color: #c8c8c8; }
+
+.essay__refs { margin-top: 2rem; font-size: var(--type-text); color: var(--gray-dark); }
+[data-theme="dark"] .essay__refs { color: #c8c8c8; }
+.essay__photo--portrait { max-width: 22rem; margin: 2rem auto; }
+.essay__photo--portrait figcaption { text-align: center; }

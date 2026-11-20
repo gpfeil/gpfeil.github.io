@@ -57,6 +57,15 @@ window.SITE = {
       ]
     },
     {
+      added: "2026-11-20",
+      kicker: "Essay",
+      title: "What a collar can’t tell you",
+      url: "essays/what-a-collar-cant-tell-you.html",
+      text: [
+        "A new Harvard framework sorts AI agents like dogs, from Pomeranian to Wolf, and asks who pays when one bites. An essay on the question working dogs raise instead: how to read a signal from a sense you don’t share, and how much of it is you."
+      ]
+    },
+    {
       added: "2026-11-03",
       kicker: "Essay",
       title: "What the trace doesn’t say",
