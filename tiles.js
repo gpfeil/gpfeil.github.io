@@ -44,7 +44,7 @@ window.SITE = {
       kicker: "About",
       title: "Where to find me",
       text: [
-        "I’m a linguistic anthropologist (PhD, University of Chicago) and emerging tech product researcher. For fifteen years I’ve studied how people work with complex flows of information: alms networks in Dakar, the data-rich workspace of JPMorgan Chase’s new global headquarters, and now large language models.",
+        "I’m a linguistic anthropologist (PhD, University of Chicago) and product researcher. For fifteen years I’ve studied how people work with complex flows of information: alms networks in Dakar, the data-rich workspace of JPMorgan Chase’s new global headquarters, and now large language models.",
         "Through Semiotomatic Research I take on qualitative and mixed-methods engagements in B2B, enterprise workplace, financial/regulated spaces, and data-rich physical environments. I’m also writing <em>Mass Intelligence</em>.",
         "<a href=\"mailto:gpfeil@protonmail.com\">gpfeil@protonmail.com</a> · <a href=\"https://www.linkedin.com/in/gpfeil\">LinkedIn</a> · <a href=\"https://github.com/gpfeil\">GitHub</a> · <a href=\"https://gretchenpfeil.com\">gretchenpfeil.com</a>"
       ]

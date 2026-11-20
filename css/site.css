@@ -290,3 +290,4 @@ img { height: auto; max-width: 100%; vertical-align: middle; }
 @media (max-width: 40rem) { .site-header__figures { grid-template-columns: 1fr 1fr; } }
 .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .site-header__figures .site-header__credit { margin-top: 0.1rem; }
+.site-header__degree { text-transform: none; letter-spacing: 0.04em; font-weight: 500; }
